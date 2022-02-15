@@ -1,0 +1,242 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amore Italy - Order</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Location/Contact Info -->
+      <div class="topbar">
+        <div>
+          <li>
+            <a href="https://goo.gl/maps/MVYxQJeYPEQ1H6WSA"
+              >265 Main St Corinth, NY 12822</a
+            >
+          </li>
+        </div>
+        <div>
+          <li><a href="tel: 518-654-9991">(518) 654-9991</a></li>
+        </div>
+      </div>
+      <nav>
+        <div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+          </ul>
+        </div>
+        <div>
+          <img src="img/amore.jpg" alt="Picture of logo" />
+        </div>
+        <div>
+          <ul>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="heroText">
+        <h1>Order Now</h1>
+        <p>Place your order for Pickup or Delivery</p>
+        <br />
+        <button>
+          <li><a href="order.html"> Start Order</a></li>
+        </button>
+      </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+      <div class="card">
+        <h2>Pickup - Delivery</h2>
+        <p>265 Main St Corinth, NY 12822</p>
+      </div>
+      <div class="gallery">
+        <div>
+          <h2>Pizza</h2>
+          <img src="img/pizza.jpg" alt="Picture of Pizza" />
+        </div>
+        <div>
+          <h2>Calzones</h2>
+          <img src="img/pizza.jpg" alt="Picture of Pizza" />
+        </div>
+        <div>
+          <h2>Apps</h2>
+          <img src="img/pizza.jpg" alt="Picture of Pizza" />
+        </div>
+        <div>
+          <h2>Salads</h2>
+          <img src="img/pizza.jpg" alt="Picture of Pizza" />
+        </div>
+        <div>
+          <h2>Entrees</h2>
+          <img src="img/pizza.jpg" alt="Picture of Pizza" />
+        </div>
+        <div>
+          <h2>Specialities</h2>
+          <img src="img/pizza.jpg" alt="Picture of Pizza" />
+        </div>
+      </div>
+
+      <!-- Order Form Details -->
+      <div class="items">
+        <!-- Items -->
+        <div>
+          <p id="item"></p>
+          <p id="item2"></p>
+        </div>
+        <div>
+          <p id="price"></p>
+          <p id="price2"></p>
+        </div>
+        <div>
+          <p>Total:</p>
+        </div>
+        <div>
+          <p id="total">$0.00</p>
+        </div>
+      </div>
+
+      <div class="details">
+        <!-- Buttons -->
+        <button>
+          <li><a href="#" id="add">Add</a></li>
+        </button>
+        <button id="del">
+          <li><a href="#" id="del">Remove</a></li>
+        </button>
+        <button>
+          <li><a href="#" id="order">Checkout</a></li>
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal Order Form -->
+    <div id="orderForm">
+      <div class="content">
+        <div class="card">
+          <h2>Order Form</h2>
+          <p>Select Pickup or Delivery</p>
+        </div>
+
+        <!-- Order Form Details -->
+        <div class="items">
+          <!-- Items -->
+          <div>
+            <form>
+                 <fieldset>
+                      <legend><p>Pizza</p></legend>
+                      <label for="size">Size:</label>
+                      <br><br>
+                      <input type="radio" name="choice" id="s" value="Small">Small
+                      <input type="radio" name="choice" id="l" value="Large">Large
+                      <input type="radio" name="choice" id="xl" value="X-Large">X-Large
+                      <br><br>
+                      <label for="toppings">Toppings:</label>
+                      <br><br>
+                       <select name="topping" id="t" multiple>
+                            <option value="Pepperoni">Pepperoni</option>
+                            <option value="Sausage">Sausage</option>
+                            <option value="Ham">Ham</option>
+                            <option value="Bacon">Bacon</option>
+                         </select>
+                         <br><br>
+                 </fieldset>
+                 <fieldset>
+                      <legend><p>Calzones</p></legend>
+                      <label for="type">Type:</label>
+                      <br><br>
+                      <input type="radio" name="choice2" id="z" value="Calzone">Calzone
+                      <input type="radio" name="choice2" id="b" value="Strombolli">Strombolli
+                      <br><br>
+                      <label for="cheeses">Cheese:</label>
+                      <br><br>
+                      <select name="cheese" id="c">
+                            <option value="Mozzarella">Mozzarella</option>
+                            <option value="Ricotta">Ricotta</option>
+                      </select>
+                 </fieldset>
+            </form>
+          </div>
+        </div>
+
+        <div class="details">
+          <!-- Buttons -->
+          <button id="update">
+            <li><a href="#" id="update">Update</a></li>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer & Social Links -->
+    <footer>
+      <ul class="footLinks">
+        <h1>
+          Family Owned & Operated <br />
+          Since 2006
+        </h1>
+        <div class="stats">
+          <div>
+            <h4>5k</h4>
+            <p>
+              Pizzas <br />
+              Sold
+            </p>
+          </div>
+
+          <div>
+            <h4>20</h4>
+            <p>
+              Different <br />
+              Flavors
+            </p>
+          </div>
+
+          <div>
+            <h4>All</h4>
+            <p>
+              Natural <br />
+              Ingedients
+            </p>
+          </div>
+        </div>
+        <hr />
+        <h3>Amore Italy Pizzeria</h3>
+        <br />
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+      <ul class="social">
+        <h3>Follow Us</h3>
+        <li>
+          <a
+            href="https://www.facebook.com/amoreitalypizza.corinth"
+            target="_blank"
+            >f</a
+          >
+        </li>
+        <li><a href="#">t</a></li>
+        <li><a href="#">in</a></li>
+      </ul>
+    </footer>
+
+    <!-- External Javascript Link -->
+    <script src="script.js"></script>
+  </body>
+</html>

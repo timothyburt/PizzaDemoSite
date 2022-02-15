@@ -1,0 +1,418 @@
+/* CSS Stylesheet */
+
+/* Written by: Tim Burt */
+
+/* Global Styles */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+html, body {
+     scroll-behavior: smooth;
+}
+
+body {
+      /* Colors */
+     background-image: linear-gradient(360deg, rgba(0, 0, 0, 1), rgba(120,13,41,1), rgba(120, 13, 41, 1));
+;
+     color: white;
+     
+     /* Fonts */
+     font-family: 'Roboto',
+     sans-serif;
+     font-size: 16px;
+     font-weight: 400;
+}
+
+h1,h2,h3 {
+     text-align: center;
+     text-shadow: 1px 1px 2px black;
+}
+
+h2 {
+     font-size: 30px;
+}
+
+h4 {
+     font-size: 40px;
+}
+
+p {
+     font-weight: 400;
+     font-size: 14px;
+     word-spacing: 2px;
+     padding: 5px;
+}
+
+/* Nav Elements */
+header {
+     display: flex;
+     z-index: 4;
+     flex-flow: row wrap;
+     justify-content: space-between;
+     align-content: center;
+     width: 100%;
+     position: fixed;
+     top: 0;
+}
+
+.topbar {
+     display: flex;
+     z-index: 3;
+     justify-content: space-between;
+     background-color: #212121;
+     position: relative;
+     width: 100%;
+     height: 40px;
+     padding: 10px;
+}
+
+nav {
+     display: flex;
+     z-index: 5;
+     justify-content: space-around;
+     align-content: center;
+     position: relative;
+     background-color: rgba(120, 13, 41, 1);
+     border-radius: 0 0 10px 10px;
+     box-shadow: 0px 0px 10px 0px #212121;
+     width: 100%;
+     height: 100px;
+}
+
+nav ul {
+     margin: 10px;
+     padding: 25px;
+}
+
+nav li a {
+     font-size: 24px;
+}
+
+/* Logo Image w/Box Shadow Effect */
+nav img {
+     width: 200px;
+     height: 100px;
+}
+
+li {
+     display: inline;
+     margin: 25px;
+     padding: 25px;
+}
+
+li > a {
+     text-align: center;
+     text-transform: uppercase;
+     color: white;
+     text-decoration: none;
+}
+
+a:hover {
+     color: antiquewhite;
+     text-shadow: 1px 1px 2px black;
+}
+
+/* Background Hero Section */
+.hero {
+      /* BG Image w/Overlay Gradient */
+     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 5, 0.3)),
+     url("img/pizza.jpg");
+
+     /* Position  w/Scroll Effect */
+     background-repeat: no-repeat;
+     background-attachment: scroll;
+     background-position: center;
+     background-size: cover;
+     position: relative;
+     border-radius: 0 0 10px 10px;
+     width: 100%;
+     height: 55%;
+     margin-top: 140px;
+}
+
+.heroText {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     padding: 25px;
+     margin: 0 auto;
+     font-size: 32px;
+}
+
+.heroText > p {
+     font-size: 20px;
+     font-weight: 300;
+}
+
+/* Order Form Button */
+button {
+      border: none;
+      box-shadow: 0 0 10px 2px #212121;
+      padding: 25px 50px;
+      border-radius: 10px;
+      color: white;
+      background-color: rgba(120, 13, 41, 1);
+      text-align: center;
+      text-transform: uppercase;
+      cursor: pointer;
+}
+
+button:hover {
+     background-color: #212121;
+     color: antiquewhite;
+     transition: 0.5 ease-in-out;
+}
+
+/* Main Content Region */
+.content {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: space-between;
+     align-content: flex-start;
+     position: relative;
+     background-image: linear-gradient(330deg, rgba(10, 10, 10, 0.9), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+     border-radius: 10px;
+     box-shadow: 0 0 10px 0px #212121;
+     color: black;
+     width: 75%;
+     height: auto;
+     margin: 25px auto;
+}
+
+/* Hidden Form */
+#orderForm {
+     display: none;
+     z-index: 9;
+     position: fixed;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.9), rgba(120, 13, 41, 1), rgba(120, 13, 41, 1));
+}
+
+form {
+    font-size: 16px;
+    font-weight: 500; 
+}
+
+fieldset {
+     border: none;
+     text-align: center;
+}
+
+legend > p {
+     font-size: 20px;
+     font-weight: 700;
+}
+
+select {
+     border: none;
+     font-size: 16px;
+}
+
+/* Content Cards */
+.card {
+     background-color: #212121;
+     border-radius: 5px 5px 0 0;
+     color: white;
+     width: 100%;
+     padding: 25px;
+     text-align: center;
+}
+
+img {
+     border-radius: 10px;
+     margin: 0 auto;
+     padding: 0 auto;
+     width: 100%;
+     max-width: 300px;
+     max-height: 200px;
+}
+
+/* Split Column Content */
+.leftCol,
+.rightCol {
+     flex-flow: column wrap;
+     position: relative;
+     text-align: center;
+     width: 50%;
+     padding: 50px;
+}
+
+.leftCol > p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.rightcol > div {
+     position: relative;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 100%;
+}
+
+/* Gallery Boxes */
+.gallery {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: center;
+     align-content: center;
+     width: 100%;
+     padding: 25px;
+}
+
+.gallery > div {
+     position: relative;
+     text-align: center;
+     width: 33%;
+     margin-left: auto;
+     margin-right: auto;
+     padding: 10px;
+}
+
+.gallery > div > h2 {
+     position: relative;
+     top: 100;
+     color: white;
+}
+
+/* Form Details & Buttons */
+.details {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: space-evenly;
+     align-content: center;
+     text-align: center;
+     width: 100%;
+     margin: 25px;
+     padding: 25px;
+}
+
+.items {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content:space-around;
+     align-content: center;
+     text-align: center;
+     width: 100%;
+     padding: 10px;
+     margin: 10px;
+}
+
+.items > div {
+     text-align: right;
+     padding: 25px;
+     margin: 0 auto;
+     width: 50%;
+}
+
+.items > div > p {
+     font-size: 20px;
+     font-weight: 700;
+}
+
+.details > button {
+     padding: 25px;
+     margin: 25px;
+}
+
+/* Footer Styles */
+footer {
+     position: relative;
+     background-color: #212121;
+     border-radius: 10px 10px 0 0;
+     width: 100%;
+     height: auto;
+}
+
+hr {
+     text-align: center;
+     margin: 25px;
+     opacity: 0.5;
+}
+
+.stats {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: space-around;
+     align-content: center;
+     width: 100%;
+     text-align: center;
+}
+
+.stats > div {
+     background-color: rgba(118, 95, 55, 1);
+     border-radius: 50%;
+     padding: 50px;
+     margin: 10px auto;
+     text-transform: uppercase;
+}
+
+.footLinks, .social {
+     text-align: center;
+     padding: 25px;
+}
+
+.social {
+     text-align: center;
+}
+
+.social li a {
+     color: rgba(120, 13, 41, 1);
+     font-size: 30px;
+     font-weight: 700;
+     text-transform: lowercase;
+}
+
+/* Media Queries for Mobile/Tablet */
+@media screen and (max-width: 800px) {
+
+     .topbar *,
+     li a {
+          font-size: 10px;
+     }
+
+     nav li a {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          font-size: 14px;
+          margin-top: -15px;
+     }
+
+     .heroText > button {
+          padding: 10px;
+          margin: 0 auto;
+          font-size: 16px;
+     }
+
+     .leftcol, .rightCol, .gallery > div {
+          width: 100%;
+     }
+
+     .leftCol, .rightCol, .gallery > div {
+          padding: 10px;
+     }
+
+     .rightCol {
+          border-radius: 0 0 10px 10px;
+     }
+
+     .footLinks li a {
+          display: block;
+          padding: 5px;
+          font-size: 14px;
+     }
+}
